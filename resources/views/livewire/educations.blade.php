@@ -14,14 +14,9 @@
 		@forelse($educations as $education)
 			<div class="col-span-6">
 				<div class="bg-gray-50 p-6 border
-                            mt-1 block w-full focus:ring
-                            focus:ring-opacity-50
-                            border-gray-300 dark:border-gray-700
-                            dark:bg-gray-700 focus:border-indigo-500
-                            dark:focus:border-indigo-600
-                            focus:ring-indigo-500
-                            dark:focus:ring-indigo-600
-                            rounded-md shadow-sm">
+						     mt-1 block w-full focus:ring
+                              focus:ring-opacity-50
+                               border-gray-300 dark:border-gray-700 dark:bg-gray-700 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
 					<div>
 						<h1 class="font-semibold text-xl dark:text-gray-100">School</h1>
 					</div>
