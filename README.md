@@ -33,8 +33,8 @@ This is a modest CMS created for coders worldwide to display their professional 
 
 ### Few things to keep in mind
 
-* I was having some computer issues at the time of recording so the app might look a little laggy
-* The screen recorder wouldn't record the upload/select forms so that why you don't see them in the video.
+* I was having some computer issues at the time of recording so the app might look a little laggy.
+* The screen recorder wouldn't record the upload/select forms so that's why you don't see them in the video.
 #### Check out the screencast [here](https://clipchamp.com/watch/HPSgbsPlCyP?utm_source=share&utm_medium=social&utm_campaign=watch)
 
 ## Getting started
