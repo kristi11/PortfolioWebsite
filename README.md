@@ -24,6 +24,15 @@ This is a modest CMS created for coders worldwide to display their professional 
 * After verification, you're free to use the app however you like.
 * 2-factor authentication is available for an added extra layer of security, but it is not required. You can use an authenticator app like [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US).
 * This app has support for dark mode based on system preference.
+* If you're working on a local environment and your profile picture doesn't display make sure to update the `APP_URL` in your `.env` file to `APP_URL=http://localhost:8000` or whatever local enviroment link you're using.
+
+## Showcase
+
+<div style="position:relative;width:fit-content;height:fit-content;">
+            <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/HPSgbsPlCyP?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+            </a>
+            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/HPSgbsPlCyP/embed" width="640" height="360"></iframe>
 
 #### If you need help getting things started, contact me. I'll be happy to help.
 
