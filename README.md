@@ -58,6 +58,6 @@ Add a `.env` file and copy the contents from the `.env.example` file inside your
 * `php artisan route:cache` - to cache the routes
 * `php artisan view:cache` - to cache the views
 
-
+You can find more infoo on laravel caching [here](https://laravel.com/docs/10.x/cache)
 
 ### Have fun with your new app!
