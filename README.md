@@ -35,6 +35,7 @@ This is a modest CMS created for coders worldwide to display their professional 
 
 * I was having some computer issues at the time of recording so the app might look a little laggy.
 * The screen recorder wouldn't record the upload/select forms so that's why you don't see them in the video.
+* The public profile thats being showcased is a very simplified version of the actual public profile since i was simply showing the functionality of the app.  To get a more accurate of how the public profile looks like you can visit my up and running personal website at [kristitanellari.com](https://www.kristitanellari.com)
 #### Check out the screencast [here](https://clipchamp.com/watch/HPSgbsPlCyP?utm_source=share&utm_medium=social&utm_campaign=watch)
 
 ## Getting started
