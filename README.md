@@ -33,6 +33,7 @@ This is a modest CMS created for coders worldwide to display their professional 
                 <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
             </a>
             <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/HPSgbsPlCyP/embed" width="640" height="360"></iframe>
+        </div>
 
 #### If you need help getting things started, contact me. I'll be happy to help.
 
