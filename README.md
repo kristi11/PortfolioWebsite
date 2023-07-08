@@ -28,8 +28,6 @@ This is a modest CMS created for coders worldwide to display their professional 
 
 ## Showcase
 
-            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/HPSgbsPlCyP/embed" width="640" height="360"></iframe>
-
 #### If you need help getting things started, contact me. I'll be happy to help.
 
 ## Getting started
