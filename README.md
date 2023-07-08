@@ -15,7 +15,7 @@ This is a modest CMS created for coders worldwide to display their professional 
 * ~~Finalize toaster notification system~~
 * ~~Secure mailto: links~~
 * ~~Design and integrate public user profile. This profile will be shown to everyone.~~
-* Integrate dark mode
+* ~~Integrate dark mode~~
 
 ## Need to know
 * If you just installed the app you will be directed to a user registration form right away. 
@@ -25,7 +25,7 @@ This is a modest CMS created for coders worldwide to display their professional 
 * After verification, you're free to use the app however you like.
 * 2-factor authentication is available for an added extra layer of security, but it is not required. You can use an authenticator app like [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US).
 * This app has support for dark mode based on system preference.
-* If you're working on a local environment and your profile picture doesn't display make sure to update the `APP_URL` in your `.env` file to `APP_URL=http://localhost:8000` or whatever local enviroment link you're using.
+* If you're working on a local environment and your profile picture does not display make sure to update the `APP_URL` in your `.env` file to `APP_URL=http://localhost:8000` or whatever local environment link you're using.
 
 #### If you need help getting things started, contact me. I'll be happy to help.
 
@@ -50,5 +50,13 @@ Add a `.env` file and copy the contents from the `.env.example` file inside your
 * To login to your app you will need to verify your email, so in order to do that you will need to setup an email server. I recommend using mailhog. The easiest way to get it up and running locally is to download the [mailhog](https://sourceforge.net/projects/mailhog.mirror/) `.zip` file, run it and update the `.env` file with the following information: `MAIL_HOST=localhost`. The default value might be `MAIL_HOST=mailpit`
 
 * Run `php artisan serve` to boot up the app (if working on a local server).
+
+## To optimize the performance you can run the following commands
+
+* `php artisan config:cache` - to cache the config file
+* `php artisan route:cache` - to cache the routes
+* `php artisan view:cache` - to cache the views
+
+
 
 ### Have fun with your new app!
