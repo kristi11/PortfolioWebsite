@@ -26,6 +26,10 @@ This is a modest CMS created for coders worldwide to display their professional 
 * This app has support for dark mode based on system preference.
 * If you're working on a local environment and your profile picture doesn't display make sure to update the `APP_URL` in your `.env` file to `APP_URL=http://localhost:8000` or whatever local enviroment link you're using.
 
+## Showcase
+
+            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/HPSgbsPlCyP/embed" width="640" height="360"></iframe>
+
 #### If you need help getting things started, contact me. I'll be happy to help.
 
 ## Getting started
