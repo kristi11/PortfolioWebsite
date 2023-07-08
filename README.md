@@ -15,6 +15,7 @@ This is a modest CMS created for coders worldwide to display their professional 
 * ~~Finalize toaster notification system~~
 * ~~Secure mailto: links~~
 * ~~Design and integrate public user profile. This profile will be shown to everyone.~~
+* Integrate dark mode
 
 ## Need to know
 * If you just installed the app you will be directed to a user registration form right away. 
@@ -26,9 +27,15 @@ This is a modest CMS created for coders worldwide to display their professional 
 * This app has support for dark mode based on system preference.
 * If you're working on a local environment and your profile picture doesn't display make sure to update the `APP_URL` in your `.env` file to `APP_URL=http://localhost:8000` or whatever local enviroment link you're using.
 
+#### If you need help getting things started, contact me. I'll be happy to help.
+
 ## Showcase
 
-#### If you need help getting things started, contact me. I'll be happy to help.
+### Few things to keep in mind
+
+* I was having some computer issues at the time of recording so the app might look a little laggy
+* The screen recorder wouldn't record the upload/select forms so that why you don't see them in the video.
+#### Check out the screencast [here](https://clipchamp.com/watch/HPSgbsPlCyP?utm_source=share&utm_medium=social&utm_campaign=watch)
 
 ## Getting started
 
