@@ -48,7 +48,8 @@ Add a `.env` file and copy the contents from the `.env.example` file inside your
 * Run `php artisan key:generate` to generate a unique app key.
 * Run `php artisan migrate`. This will migrate all the necessary database files.
 * Run `php artisan storage:link` to create a symbolic link from `public/resumes` to `storage/app/resumes` which will allow you to access files stored in `storage/app/resumes` from the browser.
-* To login to your app you will need to verify your email, so in order to do that you will need to setup an email server. I recommend using mailhog. The easiest way to get it up and running locally is to download the [mailhog](https://sourceforge.net/projects/mailhog.mirror/) `.zip` file, run it and update the `.env` file with the following information: `MAIL_HOST=localhost`. The default value might be `MAIL_HOST=mailpit`
+* On `analytics.blade.php` enter your `analytics` id instead of `YOUR-GOOGLE-ANALYTICS-ID`
+* * To login to your app you will need to verify your email, so in order to do that you will need to setup an email server. I recommend using mailhog. The easiest way to get it up and running locally is to download the [mailhog](https://sourceforge.net/projects/mailhog.mirror/) `.zip` file, run it and update the `.env` file with the following information: `MAIL_HOST=localhost`. The default value might be `MAIL_HOST=mailpit`
 
 * Run `php artisan serve` to boot up the app (if working on a local server).
 
