@@ -75,36 +75,49 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
     public function education(): HasMany
     {
         return $this->hasMany(Education::class);
     }
+
     public function experience(): HasMany
     {
         return $this->hasMany(Experience::class);
     }
+
     public function project(): HasMany
     {
         return $this->hasMany(Project::class);
     }
+
     public function certificate(): HasMany
     {
         return $this->hasMany(Certificate::class);
     }
+
     public function resume(): HasMany
     {
         return $this->hasMany(Resume::class);
     }
+
     public function services(): HasMany
     {
         return $this->hasMany(Service::class);
     }
+
     public function skill(): BelongsToMany
     {
         return $this->belongsToMany(Skill::class)->withTimestamps();
     }
+
     public function whyMe(): HasOne
     {
         return $this->hasOne(WhyMe::class);
+    }
+
+    public function seo(): HasOne
+    {
+        return $this->hasOne(SEO::class);
     }
 }
