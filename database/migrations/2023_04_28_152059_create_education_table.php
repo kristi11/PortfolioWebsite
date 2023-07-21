@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -18,13 +17,13 @@ return new class extends Migration
                 ->constrained()
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
-            $table->string("school");
-            $table->string("link");
-            $table->string("country");
-            $table->string("degree");
-            $table->string("field");
-            $table->string("month_started");
-            $table->string("year_started");
+            $table->string("school")->nullable();
+            $table->string("link")->nullable();
+            $table->string("country")->nullable();
+            $table->string("degree")->nullable();
+            $table->string("field")->nullable();
+            $table->string("month_started")->nullable();
+            $table->string("year_started")->nullable();
             $table->string("month_ended")->nullable();
             $table->string("year_ended")->nullable();
             $table->timestamps();
