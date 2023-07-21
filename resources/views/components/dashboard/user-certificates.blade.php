@@ -1,4 +1,4 @@
-<div class="p-6 border-t border-gray-200 md:border-l">
+<div class="p-6 border-t border-gray-200 md:border-l dark:border-gray-700">
     <div class="flex items-center">
         <x-icons.certificates/>
         <div class="ml-4 text-lg text-gray-600 font-semibold flex items-center">
@@ -22,7 +22,7 @@
         <div class="p-6">
             <div class="text-gray-500 text-center">
                 <div
-                        class="text-center text-gray-400 flex justify-center text-sm">
+                    class="text-center text-gray-400 flex justify-center text-sm">
                     <x-icons.empty/>
                     &nbsp;Add your certificates
                 </div>

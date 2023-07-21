@@ -1,4 +1,4 @@
-<div class="p-6 border-t border-gray-200 md:border-l">
+<div class="p-6 border-t border-gray-200 md:border-l dark:border-gray-700">
     <div class="flex items-center">
         <x-education-icon/>
         <div class="ml-4 text-lg text-gray-600 font-semibold">
@@ -32,8 +32,8 @@
                     <div class="border p-6 rounded-lg shadow-md bg-white mb-4 dark:bg-gray-700">
                         <div class="text-sm text-gray-500">
                             <div
-                                    class="font-semibold text-center"
-                                    style="overflow: auto;">
+                                class="font-semibold text-center"
+                                style="overflow: auto;">
                                 <a class="dark:text-indigo-300 font-semibold text-indigo-600" target="_blank"
                                    href="{{ url($education->link) }}">{{ ucwords($education->school) }}
                                 </a>

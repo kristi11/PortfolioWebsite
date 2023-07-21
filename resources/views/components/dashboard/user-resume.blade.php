@@ -1,19 +1,19 @@
-<div class="py-6 border-t border-gray-200 md:border-l">
+<div class="p-6 border-t border-gray-200 md:border-l dark:border-gray-700">
     <div class="flex items-center">
         <x-resume-dashdoard-icon/>
-            <div class="ml-4 text-lg text-gray-600 font-semibold flex items-center">
-                @if($resumes->isEmpty())
-                    <a href="#" class="dark:text-gray-100">Resume</a>&nbsp;
+        <div class="ml-4 text-lg text-gray-600 font-semibold flex items-center">
+            @if($resumes->isEmpty())
+                <a href="#" class="dark:text-gray-100">Resume</a>&nbsp;
+                <a href="{{ route('resume') }}">
+                    <x-icons.edit/>
+                </a>
+            @else
+                <a href="#" class="dark:text-gray-100">Resume &nbsp;
                     <a href="{{ route('resume') }}">
                         <x-icons.edit/>
                     </a>
-                @else
-                    <a href="#" class="dark:text-gray-100">Resume &nbsp;
-                    <a href="{{ route('resume') }}">
-                        <x-icons.edit/>
-                    </a>
-                @endif
-            </div>
+            @endif
+        </div>
     </div>
 
     <x-section-border/>
@@ -28,15 +28,15 @@
             @else
                 @foreach($resumes as $resume)
                     <div
-                            class="text-center font-mono font-semibold text-center py-2"
-                            style="overflow: auto;">
+                        class="text-center font-mono font-semibold text-center py-2"
+                        style="overflow: auto;">
                         <a href="{{ url($resume->resumeLink) }}"
                            class="dark:text-indigo-300 font-semibold text-indigo-600"
                            target="_blank">View</a> or
                         <x-secondary-button
-                                wire:click="download({{ $resume->id }}, 'resume.pdf')"
-                                class="mr-2"
-                                title="Download resume">
+                            wire:click="download({{ $resume->id }}, 'resume.pdf')"
+                            class="mr-2"
+                            title="Download resume">
                             Download
                         </x-secondary-button>
                         your resume

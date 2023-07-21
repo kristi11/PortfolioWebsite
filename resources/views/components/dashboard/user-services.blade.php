@@ -1,4 +1,4 @@
-<div class="p-6 border-t border-gray-200 md:border-l">
+<div class="p-6 border-t border-gray-200 md:border-l dark:border-gray-700">
     <div class="flex items-center">
         <x-icons.user_services/>
         <div class="ml-4 text-lg text-gray-600 font-semibold flex items-center">
@@ -33,8 +33,8 @@
             <div class="border p-6 rounded-lg shadow-md bg-white mb-4 mt-6 dark:bg-gray-700">
                 <div class="text-sm text-gray-500">
                     <div
-                            class="font-semibold text-center"
-                            style="overflow: auto;">
+                        class="font-semibold text-center"
+                        style="overflow: auto;">
                         {{ ucwords($service->name) }}
                     </div>
                     <div>
