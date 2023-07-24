@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\SEO;
+use Auth;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -16,6 +17,18 @@ class Seos extends Component
     public $showConfirmDeleteSEO = false;
     public $deleteId = "";
 
+    protected function rules(): array
+    {
+        return [
+            "seo.title" => [
+                "nullable",
+                "max:60",
+                "string",
+            ],
+            "seo.description" => ["nullable", "max:160", "string"],
+        ];
+    }
+
     public function mount(): void
     {
         $this->seo = $this->makeBlankSEO();
@@ -23,11 +36,17 @@ class Seos extends Component
 
     public function makeBlankSEO()
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         return SEO::make([]);
     }
 
     public function save(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->validate();
         $user = auth()->user();
         $this->seo->user_id = $user->id;
@@ -52,12 +71,18 @@ class Seos extends Component
 
     public function deleteId($id): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->deleteId = $id;
         $this->showConfirmDeleteSEO = true;
     }
 
     public function delete(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $workExperience = SEO::find($this->deleteId);
         // Delete the Experience model instance
         $workExperience->delete();
@@ -72,15 +97,5 @@ class Seos extends Component
         return view('livewire.seos', compact("seos"));
     }
 
-    protected function rules(): array
-    {
-        return [
-            "seo.title" => [
-                "nullable",
-                "max:60",
-                "string",
-            ],
-            "seo.description" => ["nullable", "max:160", "string"],
-        ];
-    }
+
 }

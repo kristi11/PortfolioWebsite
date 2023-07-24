@@ -14,7 +14,7 @@ class PublicProfile extends Component
 {
     public $user;
 
-    public function mount()
+    public function mount(): void
     {
         $this->user = User::firstOrFail();
     }

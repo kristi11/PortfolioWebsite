@@ -16,8 +16,9 @@ class UserServices extends Component
 {
     public Service $service;
     public bool $showServiceModal = false;
-public bool $showEditService = false;
+    public bool $showEditService = false;
     public bool $showConfirmDeleteService = false;
+
     protected function rules(): array
     {
         return [
@@ -30,18 +31,24 @@ public bool $showEditService = false;
         ];
     }
 
-    public function mount()
+    public function mount(): void
     {
         $this->service = $this->makeBlankService();
     }
 
     public function makeBlankService()
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         return Service::make([]);
     }
 
-    public function save()
+    public function save(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->validate();
         $user = auth()->user();
         $this->service->user_id = $user->id;
@@ -50,13 +57,13 @@ public bool $showEditService = false;
         $this->dispatchBrowserEvent("notify", "Service saved!");
     }
 
-    public function addService()
+    public function addService(): void
     {
         $this->service = $this->makeBlankService();
         $this->showServiceModal = true;
     }
 
-    public function edit(Service $service)
+    public function edit(Service $service): void
     {
         if ($this->service->isNot($service)) {
             $this->service = $service;
@@ -64,14 +71,20 @@ public bool $showEditService = false;
         $this->showServiceModal = true;
     }
 
-    public function deleteId($id)
+    public function deleteId($id): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->deleteId = $id;
         $this->showConfirmDeleteService = true;
     }
 
-    public function delete()
+    public function delete(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $service = Service::find($this->deleteId);
         // Delete the Service model instance
         $service->delete();

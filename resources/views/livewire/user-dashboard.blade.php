@@ -3,7 +3,7 @@
         <x-dashboard.user-info :user="$user"/>
     </div>
     <div>
-        <h1 class="flex justify-center mt-8 text-2xl dark:text-gray-300 underline">
+        <h1 class="flex justify-center mt-7 text-2xl dark:text-gray-300 underline mb-8">
             {{ ucwords($user->name).'\'s expertise' }}
         </h1>
     </div>

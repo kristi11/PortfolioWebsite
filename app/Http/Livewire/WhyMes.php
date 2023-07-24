@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\WhyMe;
+use Auth;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -22,7 +23,7 @@ class WhyMes extends Component
     protected function rules(): array
     {
         return [
-            "whyMe.description" => ["required","min:50","max:1000", "string"],
+            "whyMe.description" => ["required", "min:50", "max:1000", "string"],
         ];
     }
 
@@ -33,6 +34,9 @@ class WhyMes extends Component
 
     public function makeBlankWhyMe(): WhyMe
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         return WhyMe::make([]);
     }
 
@@ -52,6 +56,9 @@ class WhyMes extends Component
 
     public function save(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->validate();
         $user = auth()->user();
         $this->whyMe->user_id = $user->id;
@@ -63,6 +70,9 @@ class WhyMes extends Component
 
     public function delete(): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         WhyMe::find($this->deleteId)->delete();
         $this->showConfirmDeleteWhyMe = false;
         $this->whyMe = $this->makeBlankWhyMe();
@@ -71,6 +81,9 @@ class WhyMes extends Component
 
     public function deleteId($id): void
     {
+        if (!Auth::check()) {
+            abort(403);
+        }
         $this->deleteId = $id;
         $this->showConfirmDeleteWhyMe = true;
     }
