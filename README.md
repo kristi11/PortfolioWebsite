@@ -19,6 +19,7 @@ the [livewire](https://laravel-livewire.com/) stack.
 * ~~Secure mailto: links~~
 * ~~Design and integrate public user profile. This profile will be shown to everyone.~~
 * ~~Integrate dark mode~~
+* ~~Add real-time validation to livewire components~~
 
 ## Need to know
 
