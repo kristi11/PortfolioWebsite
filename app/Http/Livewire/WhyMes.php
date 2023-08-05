@@ -27,6 +27,11 @@ class WhyMes extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function mount(): void
     {
         $this->whyMe = $this->makeBlankWhyMe();

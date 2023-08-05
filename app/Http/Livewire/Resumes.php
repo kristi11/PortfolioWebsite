@@ -31,6 +31,11 @@ class Resumes extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function mount(): void
     {
         $this->user_id = auth()->user()->user_id;

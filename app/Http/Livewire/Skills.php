@@ -72,6 +72,11 @@ class Skills extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+    
     public function callTimeline(): void
     {
         $this->emit("callTimeline");

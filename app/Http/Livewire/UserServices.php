@@ -31,6 +31,11 @@ class UserServices extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function mount(): void
     {
         $this->service = $this->makeBlankService();

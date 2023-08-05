@@ -48,6 +48,11 @@ class Certificates extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function mount(): void
     {
         $this->certificate = $this->makeBlankCertificate();

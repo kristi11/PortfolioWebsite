@@ -60,6 +60,11 @@ class Educations extends Component
         ];
     }
 
+    public function updated($propertyName): void
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function edit(Education $education): void
     {
         if ($this->education->isNot($education)) {
