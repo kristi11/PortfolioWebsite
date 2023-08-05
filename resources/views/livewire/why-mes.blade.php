@@ -55,7 +55,7 @@
                                                         class="mr-2">
                                         Cancel
                                     </x-secondary-button>
-                                    <x-button type="submit">Save</x-button>
+                                    <x-button wire:loading.class="opacity-50" type="submit">Save</x-button>
                                 </x-slot>
                             </x-dialog-modal>
                             {{--End Edit modal--}}
@@ -106,7 +106,7 @@
         </x-slot>
         @if($whyMes->isEmpty())
             <x-slot name="actions">
-                <x-button>Save</x-button>
+                <x-button wire:loading.class="opacity-50">Save</x-button>
             </x-slot>
         @endif
     </x-form-section>

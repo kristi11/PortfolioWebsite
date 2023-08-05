@@ -64,7 +64,7 @@
                     {{ __('Saved.') }}
                 </x-action-message>
 
-                <x-button>
+                <x-button wire:loading.class="opacity-50">
                     {{ __('Save') }}
                 </x-button>
             </x-slot>
@@ -81,7 +81,7 @@
         <x-slot name="footer">
             <x-secondary-button wire:click="$set('showServiceModal', false)" class="mr-2"> Cancel
             </x-secondary-button>
-            <x-button wire:click="save">Save</x-button>
+            <x-button wire:loading.class="opacity-50" wire:click="save">Save</x-button>
         </x-slot>
     </x-dialog-modal>
     {{--End Edit modal--}}

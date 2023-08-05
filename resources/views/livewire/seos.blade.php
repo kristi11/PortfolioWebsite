@@ -46,7 +46,7 @@
                                     <x-secondary-button class="mr-2"
                                                         wire:click="$set('showSEOModal', false)">Cancel
                                     </x-secondary-button>
-                                    <x-button wire:click="save">Save</x-button>
+                                    <x-button wire:loading.class="opacity-50" wire:click="save">Save</x-button>
                                 </x-slot>
                             </x-dialog-modal>
                             {{--End edit modal--}}
@@ -82,7 +82,7 @@
         </x-slot>
         @if($seos->isEmpty())
             <x-slot name="actions">
-                <x-button>Save</x-button>
+                <x-button wire:loading.class="opacity-50">Save</x-button>
             </x-slot>
         @endif
     </x-form-section>
