@@ -5,7 +5,6 @@ namespace App\Http\Livewire;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
 
 
@@ -13,7 +12,7 @@ class SecureMailto extends Component
 {
     public $email;
 
-    public function redirectToMailto(): RedirectResponse
+    public function redirectToMailto()
     {
         $encodedEmail = urlencode($this->email);
         $mailtoLink = "mailto:$encodedEmail";

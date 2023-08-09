@@ -114,11 +114,16 @@
                 @endif
             </p>
 
-            <h3 class="leading-normal text-2xl">
+            <h3 class="leading-normal text-2xl mb-10">
                 @if($user && $user->city && $user->state)
                     {{ ucwords($user->city).','.$user->state }}
                 @endif
             </h3>
+            <button
+                class="my-16 mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            >
+                <a href="#email">Subscribe to my newsletter</a>
+            </button>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::get('/', function () {
         'resume' => $user->resume,
     ]);
 });
+
+Route::post('newsletter', NewsletterController::class);
 
 Route::middleware([
     'auth:sanctum',

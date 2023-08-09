@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 <livewire:head :user="$user"/>
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
 @livewireStyles
