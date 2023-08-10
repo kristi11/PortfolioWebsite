@@ -20,6 +20,7 @@ the [livewire](https://laravel-livewire.com/) stack.
 * ~~Design and integrate public user profile. This profile will be shown to everyone.~~
 * ~~Integrate dark mode~~
 * ~~Add real-time validation to livewire components~~
+* ~~Add subscribe to newsletter functionality~~
 
 ## Need to know
 
@@ -65,10 +66,19 @@ necessary app information. Open the console and `cd` into your project root dire
   allow you to access files stored in `storage/app/resumes` from the browser.
 * On `analytics.blade.php` enter your `analytics` id instead of `YOUR-GOOGLE-ANALYTICS-ID`
 *
-    * To login to your app you will need to verify your email, so in order to do that you will need to setup an email
-      server. I recommend using mailhog. The easiest way to get it up and running locally is to download
-      the [mailhog](https://sourceforge.net/projects/mailhog.mirror/) `.zip` file, run it and update the `.env` file
-      with the following information: `MAIL_HOST=localhost`. The default value might be `MAIL_HOST=mailpit`
+* To login to your app you will need to verify your email, so in order to do that you will need to setup an email
+  server. I recommend using mailhog. The easiest way to get it up and running locally is to download
+  the [mailhog](https://sourceforge.net/projects/mailhog.mirror/) `.zip` file, run it and update the `.env` file
+  with the following information: `MAIL_HOST=localhost`. The default value might be `MAIL_HOST=mailpit`
+
+* To enable subscribing to the newsletter you will need to create a [mailchimp](https://mailchimp.com/) account and
+  update the `.env` file with the following information:
+    * `MAILCHIMP_KEY=your mailchimp key`
+    * `MAILCHIMP_LIST_SUBSCRIBERS=your mailchimp list subscribers id`
+    * `MAILCHIMP_SERVER_PREFIX=your mailchimp server prefix`
+
+* If your do not know how to set up your API key and the necessary steps to get started with mailchimp you can check the
+  mailchimp's [quickstart guide](https://mailchimp.com/developer/marketing/guides/quick-start/)
 
 * Run `php artisan serve` to boot up the app (if working on a local server).
 
